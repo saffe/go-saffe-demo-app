@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import SaffeCapture from "rn-saffe-capture";
+import SaffeCapture from "@go.saffe/go-saffe-react-native";
 
 type Props = {
   key: string;
@@ -9,7 +9,17 @@ type Props = {
 }
 
 export default function Capture({ route, navigation }) {
+
+  const onFinish = () => {
+    navigation.goBack()
+  }
+
+  const onClose = () => {
+    navigation.goBack()
+  }
+
   const { apiKey, user, type, endToEndId } = route.params;
+
   return (
     <View style={{ flex: 1 }}>
       <SaffeCapture
@@ -17,6 +27,8 @@ export default function Capture({ route, navigation }) {
         user={user}
         type={type}
         endToEndId={endToEndId}
+        onClose={onClose}
+        onFinish={onFinish}
       />
     </View>
   )
