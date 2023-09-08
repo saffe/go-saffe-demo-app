@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@expo/webpack-config": "^19.0.0",
-    "@go.saffe/go-saffe-react-native": "^0.1.4",
+    "@go.saffe/go-saffe-react-native": "^1.0.0",
     "@notifee/react-native": "^7.5.0",
     "@react-native-async-storage/async-storage": "1.18.2",
     "@react-navigation/native": "^6.1.5",
